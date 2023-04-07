@@ -9,10 +9,10 @@ router.get('/articles', getAllArticlesAdmin);
 
 router.get('/articles/:id', getOneArticleAdmin);
 
-router.post('/articles/create-article', createArticleAdmin);
+router.post('/articles/', createArticleAdmin);
 
-router.put('/articles/edit-article/:id', editArticleAdmin);
+router.put('/articles/:id', editArticleAdmin);
 
-router.get('/articles/remove-article/:id', deleteArticle);
+router.delete('/articles/:id', deleteArticle);
 
 module.exports = router;

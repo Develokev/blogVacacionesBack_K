@@ -18,7 +18,7 @@ const getAllArticlesAdmin = async (req,res) => {
             
             return res.status(200).json({
                 ok:true,
-                msg: 'Capo, sacá la guita viste',
+                msg: 'Successfully getting all articles',
                 articles
             })
 
@@ -72,7 +72,6 @@ const createArticleAdmin = async (req, res) => {
             ok:true,
             msg: 'Creating Article successfully'
         })
-        // return res.redirect('/admin/articles');
 
     } catch (error) {
 
@@ -106,7 +105,7 @@ const editArticleAdmin = async (req, res) => {
 
         return res.status(500).json({
             ok: false,
-            msg: "Error retrieving the movie",
+            msg: "Error retrieving the article",
         });
 }};
 
@@ -116,7 +115,7 @@ const deleteArticle = async (req, res) => {
 
         const id = req.params.id;
 
-        await Articles.findByIdAndDelete(id);
+        await Articles.findByIdAndDelete({ _id: id });
 
         return res.status(200).json({
             ok: true,

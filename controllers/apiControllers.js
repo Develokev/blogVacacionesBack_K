@@ -130,10 +130,44 @@ const deleteArticle = async (req, res) => {
         });
 }};
 
+const searchEntries = async (req,res) => {
+
+    const search = new RegExp(`${req.query.search}`, "i")
+
+    try {
+        
+        const articles = await Articles.find({$or: [{title:search}, {extract:search}, {description:search}]})
+
+        if(articles.length==0) {
+
+            return res.status(400).json({
+                ok:false,
+                msg: 'No results under that search'
+            })
+
+        } else {
+            
+            return res.status(200).json({
+                ok:true,
+                msg: 'Search Successfull',
+                articles
+            })
+
+        }
+
+    } catch (error) {
+
+        return res.status(500).json({
+            ok: false,
+            msg: "Error retrieving search",
+        });       
+}};
+
 module.exports = {
     getAllArticlesAdmin,
     getOneArticleAdmin,
     createArticleAdmin,
     editArticleAdmin,
-    deleteArticle
+    deleteArticle,
+    searchEntries
 }

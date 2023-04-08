@@ -61,6 +61,7 @@ const createArticleAdmin = async (req, res) => {
         title: req.body.title,
         extract: req.body.extract,
         description: req.body.description,
+        photo: req.body.photo,
 
     });
 
@@ -90,8 +91,9 @@ const editArticleAdmin = async (req, res) => {
         const title = req.body.title;
         const extract = req.body.extract;
         const description = req.body.description;
+        const photo = req.body.photo;
 
-        const update = { 'title': title, 'extract': extract, 'description': description, };
+        const update = { 'title': title, 'extract': extract, 'description': description, 'photo': photo};
 
         const newData = await Articles.findOneAndUpdate({ _id: id }, { $set: update });
 

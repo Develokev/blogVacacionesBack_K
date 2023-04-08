@@ -5,7 +5,7 @@ const connection = async () => {
    try {
 
        const response = await mongoose.connect(process.env.URI_CONNECT)
-       console.log('connected to Blog Database')
+       console.log('Back-end connected to Blog Database')
        return response
 
    } catch (error) {

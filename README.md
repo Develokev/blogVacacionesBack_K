@@ -37,6 +37,11 @@ URLsFront ADMIN
 "/create-form"
 "/edit-form/:id"**
 
+**Credenciales para acceder como administrador en el LOGIN**
+        **"email":"admin@admin.uk",**
+        **"password":"administrador",**
+        **"name":"Admin"**
+
 #####En caso de "app crashed", escribir en la terminal "rs" y "enter" para reinicializarlo.
 
 Espero que la disfruten, gracias.

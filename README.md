@@ -16,7 +16,7 @@ Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno un arc
 
 Se debe inicializar el NPM --> **"npm init -y"**
 Seguido de ello se deberán instalar las siguientes dependencias: **npm i [instalaciones]**
-"cors" - "dotenv" - "ejs" - "express" - "express-validator" - "mongoose" - "multer" - "bcrypt".
+"cors" - "dotenv" - "ejs" - "express" - "express-validator" - "mongoose" - "multer" - "bcrypt" - "jsonwebtoken".
 
 Se creará automáticamente el archivo "package.json" en el que deberemos añadir a los scripts:
 - [ ] "start": "node app.js",

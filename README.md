@@ -1,7 +1,7 @@
 # blogVacacionesBack_K
 #####Necesario para correr la aplicación web, tanto en el front como en el back.
 
-Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno una archivo **".ENV"** a primer nivel que contenga la siguiente información.
+Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno un archivo **".ENV"** a primer nivel que contenga la siguiente información.
 
 + ENV:
 + **PORT = 3004**
@@ -12,9 +12,11 @@ Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno una ar
 
 + URLBASEMONGO = http://localhost:3004/api/articles/
 
++ JWT_SECRET_KEY =  noEstamosTodosFaltaMadelaine
+
 Se debe inicializar el NPM --> **"npm init -y"**
-Seguido de ello se deberán instalar las siguientes dependencias:
-"cors" - "dotenv" - "ejs" - "express" - "express-validator" - "mongoose" - "multer".
+Seguido de ello se deberán instalar las siguientes dependencias: **npm i [instalaciones]**
+"cors" - "dotenv" - "ejs" - "express" - "express-validator" - "mongoose" - "multer" - "bcrypt".
 
 Se creará automáticamente el archivo "package.json" en el que deberemos añadir a los scripts:
 - [ ] "start": "node app.js",
@@ -28,7 +30,7 @@ Ya está lista la app web para ser utilizada.
 URLsFront USERS
 **"/"
 "/read-more/:id"
-"/login"
+"/login-form"
 "/search-results?search="palabra de búsqueda"**
 URLsFront ADMIN
 **/dashboard

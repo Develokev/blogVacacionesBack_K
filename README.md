@@ -1,5 +1,5 @@
 # blogVacacionesBack_K
-#####Necesario para correr la aplicación web, tanto en el front como en el back.
+##### Necesario para correr la aplicación web, tanto en el front como en el back.
 
 Luego de hacer el pull de ambos repositorios, se deben añadir a cada uno un archivo **".ENV"** a primer nivel que contenga la siguiente información.
 
@@ -28,7 +28,7 @@ Ya está lista la app web para ser utilizada.
 
 ***
 URLsFront USERS
-**"/"
+**"/"**
 "/read-more/:id"
 "/login-form"
 "/search-results?search="palabra de búsqueda"**
